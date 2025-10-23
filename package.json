@@ -1,0 +1,27 @@
+{
+    "name": "playwright-playground",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "conduit-smoke": "npx playwright test --project=regression --grep @smoke",
+        "conduit-regression": "npx playwright test --project=regression -- tests/conduit",
+        "conduit-like-counter": "npx playwright test --project=likeCounter",
+        "conduit-like-counter-global": "npx playwright test --project=likeCounterGlobal",
+        "format": "npx prettier --write .",
+        "allure:generate": "allure generate ./allure-results -o ./allure-report --clean",
+        "allure:open": "allure open ./allure-report"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@faker-js/faker": "^10.1.0",
+        "@playwright/test": "^1.56.1",
+        "@types/node": "^24.8.1",
+        "allure-playwright": "^3.4.1",
+        "dotenv": "^17.2.3",
+        "prettier": "^3.6.2"
+    }
+}

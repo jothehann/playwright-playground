@@ -1,0 +1,11 @@
+node_modules
+build
+dist
+.next
+coverage
+package-lock.json
+yarn.lock
+.github
+.vscode
+playwright-report
+test-results

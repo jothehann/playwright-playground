@@ -7,7 +7,7 @@ export default defineConfig({
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 1,
     workers: process.env.CI ? 1 : 5,
-    reporter: [['json', { outputFile: 'test-results/results.json' }], ['junit', { outputFile: 'test-results/results.xml' }], ['allure-playwright']],
+    reporter: [['line'], ['allure-playwright']],
     use: {
         trace: 'on-first-retry',
         baseURL: 'https://conduit.bondaracademy.com/',

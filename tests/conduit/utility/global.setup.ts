@@ -1,5 +1,5 @@
 import { expect, request } from '@playwright/test';
-import user from '../../../auth/conduit-user.json';
+import user from '../../../authentication/conduit-user.json';
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
@@ -8,8 +8,8 @@ import { ConduitPage } from '../pages/conduit.page';
 dotenv.config();
 
 export default async function globalSetup() {
-    const authFile = path.join('auth', 'conduit-user.json');
-    const localCredPath = path.join('auth', 'conduit-credentials.json');
+    const authFile = path.join('authentication', 'conduit-user.json');
+    const localCredPath = path.join('authentication', 'conduit-credentials.json');
     const context = await request.newContext();
 
     // Prefer env vars (CI-friendly), then fallback to a local gitignored file

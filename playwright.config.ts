@@ -15,7 +15,7 @@ export default defineConfig({
         channel: 'chrome',
         headless: false,
         viewport: { width: 1920, height: 1080 },
-        storageState: 'auth/conduit-user.json',
+        storageState: 'authentication/conduit-user.json',
         extraHTTPHeaders: {
             Authorization: `Token ${process.env.ACCESS_TOKEN}`,
         },

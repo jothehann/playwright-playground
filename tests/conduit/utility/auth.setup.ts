@@ -1,5 +1,5 @@
 import { test as setup } from '@playwright/test';
-import user from '../../../auth/conduit-user.json';
+import user from '../../../authentication/conduit-user.json';
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
@@ -7,8 +7,8 @@ import { ApiHelper } from '../../helper/api.helper';
 
 dotenv.config(); // loads .env into process.env
 
-const authFile = path.join('auth', 'conduit-user.json');
-const localCredPath = path.join('auth', 'conduit-credentials.json');
+const authFile = path.join('authentication', 'conduit-user.json');
+const localCredPath = path.join('authentication', 'conduit-credentials.json');
 
 setup('authentication', async ({ request }) => {
     // Prefer env vars (CI-friendly), then fallback to a local gitignored file

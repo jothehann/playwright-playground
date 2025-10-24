@@ -17,11 +17,13 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Install Allure CLI
+      run: npm install -g allure-commandline --force
     - name: Run Playwright tests - Smoke
       run: npm run conduit-smoke
     - name: Generate Allure report
       run: |
-          npx allure generate allure-results --clean -o allure-report
+        npx allure generate allure-results --clean -o allure-report
     - name: Upload Allure report as artifact
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}

@@ -7,6 +7,7 @@ node_modules/
 /playwright/.auth/
 .env
 screenshots/
+playwright-report/
 allure-results/
 allure-report/
 .github/chatmodes/

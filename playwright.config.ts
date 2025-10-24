@@ -13,7 +13,7 @@ export default defineConfig({
         baseURL: 'https://conduit.bondaracademy.com/',
         browserName: 'chromium',
         channel: 'chrome',
-        headless: false,
+        headless: true,
         viewport: { width: 1920, height: 1080 },
         storageState: 'authentication/conduit-user.json',
         extraHTTPHeaders: {

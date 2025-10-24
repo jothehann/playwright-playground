@@ -18,13 +18,13 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps --force
     - name: Run Playwright tests - Smoke
-      run: nom run conduit-smoke
+      run: npm run conduit-smoke
     - name: Run Playwright tests - Reression
-      run: nom run conduit-regression
+      run: npm run conduit-regression
     - name: Run Playwright tests - Like Counter
-      run: nom run conduit-like-counter
+      run: npm run conduit-like-counter
     - name: Run Playwright tests - Like Counter Global
-      run: nom run conduit-like-counter-global
+      run: npm run conduit-like-counter-global
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:

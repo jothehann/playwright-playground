@@ -18,7 +18,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps --force
     - name: Run Playwright tests - Smoke
-      run: npm run conduit-smoke
+      run: npx playwright test --project=regression --grep @smoke
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:

@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "conduit-smoke": "npx playwright test --project=regression --grep @smoke --headed",
+        "conduit-smoke": "npx playwright test --project=regression --grep @smoke",
         "conduit-regression": "npx playwright test --project=regression -- tests/conduit",
         "conduit-like-counter": "npx playwright test --project=likeCounter",
         "conduit-like-counter-global": "npx playwright test --project=likeCounterGlobal",
